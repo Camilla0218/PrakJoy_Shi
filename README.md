@@ -1,86 +1,151 @@
-<h1>🍺 Process Automation Project – Automated Beer Pouring Workflow</h1>
+<h1 align="center">🍺 Process Automation Project – Automated Beer Pouring Workflow</h1>
 
 <h2>📌 Overview</h2>
 <p>
-This repository contains a process automation project developed in the context of Sustainable Process Automation at Technical University of Munich.
-</p>
-<p>
-The project demonstrates how a digital workflow can orchestrate a physical task — automated beer pouring — using a robotic system (UR5) through an XML-based process model.
+This repository contains the full implementation of my project for the course <strong>Sustainable Process Automation</strong> at the Technical University of Munich.
 </p>
 
-<h2>⚙️ Project Description</h2>
 <p>
-The core of this repository is an XML-based process model designed for execution in a workflow engine such as CPEE (Cloud Process Execution Engine).
+The project demonstrates how a digital workflow can orchestrate a real-world physical task — <strong>automated beer pouring</strong> — by integrating a workflow engine (CPEE), a UR5 robotic system, and custom-built hardware components.
 </p>
+
 <p>
-The use case focuses on an automated beer pouring scenario, where the workflow coordinates interactions between software and a robotic arm.
+All relevant artifacts of the project are included in this repository, including process models, robot programs, and hardware designs.
+</p>
+
+<hr>
+
+<h2>⚙️ Project Objective</h2>
+<p>
+The goal of this project was to design and implement a <strong>cyber-physical system</strong> where a workflow engine coordinates and controls physical actions performed by a robotic arm.
+</p>
+
+<p>
+The system focuses on automating the beer pouring process while ensuring:
+</p>
+
+<ul>
+  <li>Reliable orchestration of tasks</li>
+  <li>Synchronization between software and hardware</li>
+  <li>Clear separation between process logic and execution layer</li>
+</ul>
+
+<hr>
+
+<h2>🏗️ System Architecture</h2>
+<p>
+The system consists of three main components:
+</p>
+
+<ul>
+  <li><strong>CPEE Workflow Engine:</strong> Controls the process logic and execution flow</li>
+  <li><strong>UR5 Robot:</strong> Executes physical actions such as pouring beer</li>
+  <li><strong>Hardware Components:</strong> Custom-designed gripper and attachments</li>
+</ul>
+
+<p>
+Communication is achieved via HTTP-based service calls, allowing the workflow engine to trigger robot programs and wait for their completion.
+</p>
+
+<hr>
+
+<h2>🔄 Process Workflow</h2>
+<p>
+The workflow is defined in an XML-based process model executed by CPEE.
 </p>
 
 <p>The process includes:</p>
 <ul>
-  <li>Triggering a robotic program to pour beer</li>
-  <li>Waiting for task completion via synchronous endpoints</li>
-  <li>Managing process flow and execution order</li>
-  <li>Structuring the automation logic in a reproducible workflow</li>
+  <li>Triggering robot programs for beer pouring</li>
+  <li>Using synchronous endpoints (<code>/wait</code>) to ensure correct execution order</li>
+  <li>Coordinating sequential and logical process steps</li>
 </ul>
 
 <p>
-This project illustrates how digital process orchestration can control real-world physical actions.
+This demonstrates how workflow orchestration can be used to control real-world processes in a structured and reproducible way.
 </p>
+
+<hr>
+
+<h2>🤖 Robot Integration</h2>
+<p>
+The UR5 robotic arm is integrated via HTTP endpoints that expose executable programs.
+</p>
+
+<ul>
+  <li>Robot programs are stored as <code>.urp</code> files</li>
+  <li>Each program represents a specific action (e.g., pouring, positioning)</li>
+  <li>The workflow triggers these programs remotely</li>
+  <li>The <code>/wait</code> endpoint ensures synchronous execution</li>
+</ul>
+
+<p>
+This approach decouples the workflow logic from the physical execution layer.
+</p>
+
+<hr>
+
+<h2>🧩 Hardware Design (3D Models)</h2>
+<p>
+As part of the project, custom hardware components were designed to support the robotic task.
+</p>
+
+<ul>
+  <li>Gripper attachments for holding bottles</li>
+  <li>Supporting components for stable manipulation</li>
+  <li>Designed as 3D models for prototyping and fabrication</li>
+</ul>
+
+<p>
+These components enable the robot to interact reliably with real-world objects.
+</p>
+
+<hr>
 
 <h2>🧩 Repository Structure</h2>
 <pre>
-├── process_model.xml
-├── images/
-│   └── midtermSnapshot.jpeg
-│   └── finalSnapshot.jpeg(tbd)
+├── JoyPrak_Shi.xml              # CPEE process model
+├── robot program/              # UR5 robot programs (.urp)
+├── images and videos/          # Demonstration visuals
+├── 3d models/                  # Custom hardware designs
 └── README.md
 </pre>
 
-<h2>🔍 Key Concepts</h2>
-<ul>
-  <li><strong>Process Orchestration:</strong> Coordinating multi-step workflows</li>
-  <li><strong>Service Integration:</strong> Invoking UR5 robot programs via HTTP endpoints</li>
-  <li><strong>Synchronous Execution Control:</strong> Ensuring correct task sequencing</li>
-</ul>
-
-<h3>🤖 System Integration</h3>
-<p>
-The workflow interacts with a UR5 robotic arm, which exposes execution endpoints for specific programs.
-</p>
-
-<p>Example interaction:</p>
-<ul>
-  <li>HTTP request triggers a robot program (e.g., beer pouring)</li>
-  <li><code>/wait</code> endpoint ensures the workflow proceeds only after completion</li>
-</ul>
-
-<p>This setup enables:</p>
-<ul>
-  <li>Reliable execution control</li>
-  <li>Decoupling between workflow logic and physical actions</li>
-</ul>
+<hr>
 
 <h2>🚀 Technologies Used</h2>
 <ul>
   <li>XML (Process Modeling)</li>
   <li>CPEE Workflow Engine</li>
-  <li>REST APIs (HTTP-based control)</li>
+  <li>REST APIs (HTTP-based communication)</li>
   <li>UR5 Robotic System</li>
+  <li>3D Modeling Tools (for hardware design)</li>
 </ul>
 
-<h2>🎯 Learning Outcomes</h2>
+<hr>
+
+<h2>🎯 What I Implemented</h2>
 <ul>
-  <li>Designing executable workflows for real-world automation</li>
-  <li>Integrating software systems with robotic hardware</li>
-  <li>Understanding orchestration in distributed systems</li>
-  <li>Applying process automation concepts to physical use cases</li>
+  <li>Designed and implemented the complete CPEE workflow model</li>
+  <li>Integrated UR5 robot programs via HTTP endpoints</li>
+  <li>Implemented synchronous execution using <code>/wait</code></li>
+  <li>Structured the automation logic for reproducibility</li>
+  <li>Designed custom 3D components for robotic interaction</li>
+  <li>Organized all project artifacts into a unified repository</li>
 </ul>
+
+<hr>
 
 <h2>📎 Notes</h2>
 <p>
-This repository serves as a conceptual and technical demonstration of integrating workflow engines with robotic systems for real-world automation tasks.
+This project demonstrates the integration of software workflows and physical systems, highlighting the role of process automation in cyber-physical environments.
 </p>
+
+<p>
+The repository serves as both a technical implementation and a project documentation.
+</p>
+
+<hr>
 
 <h2>👤 Author</h2>
 <p>
