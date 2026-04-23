@@ -32,7 +32,8 @@ This project illustrates how digital process orchestration can control real-worl
 <pre>
 ├── process_model.xml
 ├── images/
-│   └── demo.png
+│   └── midtermSnapshot.jpeg
+│   └── finalSnapshot.jpeg(tbd)
 └── README.md
 </pre>
 
