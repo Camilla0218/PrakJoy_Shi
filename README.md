@@ -1,80 +1,89 @@
-🍺 Process Automation Project – Automated Beer Pouring Workflow
-📌 Overview
+<h1>🍺 Process Automation Project – Automated Beer Pouring Workflow</h1>
 
+<h2>📌 Overview</h2>
+<p>
 This repository contains a process automation project developed in the context of Sustainable Process Automation at Technical University of Munich.
-
+</p>
+<p>
 The project demonstrates how a digital workflow can orchestrate a physical task — automated beer pouring — using a robotic system (UR5) through an XML-based process model.
+</p>
 
-⚙️ Project Description
-
+<h2>⚙️ Project Description</h2>
+<p>
 The core of this repository is an XML-based process model designed for execution in a workflow engine such as CPEE (Cloud Process Execution Engine).
-
+</p>
+<p>
 The use case focuses on an automated beer pouring scenario, where the workflow coordinates interactions between software and a robotic arm.
+</p>
 
-The process includes:
+<p>The process includes:</p>
+<ul>
+  <li>Triggering a robotic program to pour beer</li>
+  <li>Waiting for task completion via synchronous endpoints</li>
+  <li>Managing process flow and execution order</li>
+  <li>Structuring the automation logic in a reproducible workflow</li>
+</ul>
 
-Triggering a robotic program to pour beer
-Waiting for task completion via synchronous endpoints
-Managing process flow and execution order
-Structuring the automation logic in a reproducible workflow
-
+<p>
 This project illustrates how digital process orchestration can control real-world physical actions.
+</p>
 
-🧩 Repository Structure
-├── process_model.xml     # Main workflow definition (CPEE-compatible)
-├── images/              # Supporting project visuals
-│   ├── workflow.png
-│   ├── system.png
+<h2>🧩 Repository Structure</h2>
+<pre>
+├── process_model.xml
+├── images/
 │   └── demo.png
 └── README.md
-🖼️ Process Visualization
+</pre>
 
-Below are some visual representations of the workflow and system setup:
+<h2>🔍 Key Concepts</h2>
+<ul>
+  <li><strong>Process Orchestration:</strong> Coordinating multi-step workflows</li>
+  <li><strong>Service Integration:</strong> Invoking UR5 robot programs via HTTP endpoints</li>
+  <li><strong>Synchronous Execution Control:</strong> Ensuring correct task sequencing</li>
+</ul>
 
-🍺 Beer Pouring Workflow
-
-🤖 System Architecture (CPEE + UR5 Integration)
-
-🔍 Key Concepts
-
-This project demonstrates several important concepts in modern automation systems:
-
-Process Orchestration: Coordinating multi-step workflows
-Cyber-Physical Systems: Linking software with robotic execution
-Service Integration: Invoking UR5 robot programs via HTTP endpoints
-Synchronous Execution Control: Ensuring correct task sequencing
-🤖 System Integration
-
+<h3>🤖 System Integration</h3>
+<p>
 The workflow interacts with a UR5 robotic arm, which exposes execution endpoints for specific programs.
+</p>
 
-Example interaction:
+<p>Example interaction:</p>
+<ul>
+  <li>HTTP request triggers a robot program (e.g., beer pouring)</li>
+  <li><code>/wait</code> endpoint ensures the workflow proceeds only after completion</li>
+</ul>
 
-HTTP request triggers a robot program (e.g., beer pouring)
-/wait endpoint ensures the workflow proceeds only after completion
+<p>This setup enables:</p>
+<ul>
+  <li>Reliable execution control</li>
+  <li>Decoupling between workflow logic and physical actions</li>
+</ul>
 
-This setup enables:
+<h2>🚀 Technologies Used</h2>
+<ul>
+  <li>XML (Process Modeling)</li>
+  <li>CPEE Workflow Engine</li>
+  <li>REST APIs (HTTP-based control)</li>
+  <li>UR5 Robotic System</li>
+</ul>
 
-Reliable execution control
-Decoupling between workflow logic and physical actions
-🚀 Technologies Used
-XML (Process Modeling)
-CPEE Workflow Engine
-REST APIs (HTTP-based control)
-UR5 Robotic System
-🎯 Learning Outcomes
+<h2>🎯 Learning Outcomes</h2>
+<ul>
+  <li>Designing executable workflows for real-world automation</li>
+  <li>Integrating software systems with robotic hardware</li>
+  <li>Understanding orchestration in distributed systems</li>
+  <li>Applying process automation concepts to physical use cases</li>
+</ul>
 
-Through this project, the following skills were developed:
-
-Designing executable workflows for real-world automation
-Integrating software systems with robotic hardware
-Understanding orchestration in distributed systems
-Applying process automation concepts to physical use cases
-📎 Notes
-
+<h2>📎 Notes</h2>
+<p>
 This repository serves as a conceptual and technical demonstration of integrating workflow engines with robotic systems for real-world automation tasks.
+</p>
 
-👤 Author
-
-Tianyi Shi
-M.Sc. Information Systems
+<h2>👤 Author</h2>
+<p>
+Tianyi Shi<br>
+M.Sc. Information Systems<br>
 Technical University of Munich
+</p>
