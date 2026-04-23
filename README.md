@@ -20,6 +20,13 @@ Click the image below to watch the full demonstration:
 </a>
 
 <p>
+Or click the link below to watch:
+</p>
+▶️ <a href="https://youtu.be/XG8-N5sbDrg" target="_blank">
+  Watch the full demo video on YouTube
+</a>
+
+<p>
 The demo highlights the orchestration of physical actions through a structured process model, including robot program execution and synchronized task control.
 </p>
 
