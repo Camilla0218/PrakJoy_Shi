@@ -5,6 +5,24 @@
 This repository contains the full implementation of my project for the course <strong>Sustainable Process Automation</strong> at the Technical University of Munich.
 </p>
 
+<h2>🎬 Demo Video</h2>
+
+<p>
+The following video demonstrates the automated beer pouring workflow, showcasing the interaction between the CPEE workflow engine and the UR5 robotic system in a real-world scenario.
+</p>
+
+<p>
+Click the image below to watch the full demonstration:
+</p>
+
+<a href="https://youtu.be/XG8-N5sbDrg" target="_blank">
+  <img src="images and videos/demo.png" width="600">
+</a>
+
+<p>
+The demo highlights the orchestration of physical actions through a structured process model, including robot program execution and synchronized task control.
+</p>
+
 <p>
 The project demonstrates how a digital workflow can orchestrate a real-world physical task — <strong>automated beer pouring</strong> — by integrating a workflow engine (CPEE), a UR5 robotic system, and custom-built hardware components.
 </p>
