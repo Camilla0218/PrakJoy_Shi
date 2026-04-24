@@ -21,13 +21,13 @@
     <info>JoyPrak_Shi</info>
     <modeltype>CPEE</modeltype>
     <theme>dataflow</theme>
-    <creator>Christine Ashcreek</creator>
     <guarded_id/>
+    <creator>Christine Ashcreek</creator>
     <author>Christine Ashcreek</author>
     <model_uuid>dbfb6e22-2e94-468c-ba59-2aab448fdafa</model_uuid>
     <model_version/>
-    <design_dir>Teaching.dir/Prak.dir/TUM-Prak-25-WS.dir/ShiTianyi.dir</design_dir>
     <design_stage>development</design_stage>
+    <design_dir>Teaching.dir/Prak.dir/TUM-Prak-25-WS.dir/ShiTianyi.dir</design_dir>
   </attributes>
   <description>
     <description xmlns="http://cpee.org/ns/description/1.0">
@@ -44,6 +44,11 @@
         </_annotations>
         <choose eid="e2" mode="exclusive" label="a new bottle of beer?">
           <alternative eid="e3" condition="data.bottle_remaining_pours = 3">
+            <_probability>
+              <_probability_min/>
+              <_probability_max/>
+              <_probability_avg/>
+            </_probability>
             <call id="a1" endpoint="open">
               <parameters>
                 <label>Start open_bottle</label>
@@ -175,15 +180,15 @@
                 </_context_data_analysis>
               </annotations>
             </manipulate>
-            <_probability>
-              <_probability_min>50</_probability_min>
-              <_probability_max>0</_probability_max>
-              <_probability_avg>0</_probability_avg>
-            </_probability>
           </alternative>
           <otherwise>
             <choose eid="e4" mode="exclusive" label="last one?">
               <alternative eid="e5" condition="data.bottle_remaining_pours = 2">
+                <_probability>
+                  <_probability_min/>
+                  <_probability_max/>
+                  <_probability_avg/>
+                </_probability>
                 <call id="a5" endpoint="pick">
                   <parameters>
                     <label>Start pick_bottle</label>
@@ -275,11 +280,6 @@
                     </_context_data_analysis>
                   </annotations>
                 </manipulate>
-                <_probability>
-                  <_probability_min>66</_probability_min>
-                  <_probability_max>0</_probability_max>
-                  <_probability_avg>0</_probability_avg>
-                </_probability>
               </alternative>
               <otherwise>
                 <call id="a8" endpoint="pick">
